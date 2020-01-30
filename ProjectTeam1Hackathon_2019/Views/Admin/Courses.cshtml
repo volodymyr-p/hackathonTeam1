@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Courses";
+}
+
+<h2>Менеджер курсів</h2>
+
+<div class="container">
+    <div class="actions">
+        @Html.ActionLink("Додати курс", "Add", "Courses")
+        @Html.ActionLink("Редагувати курс", "Edit", "Courses")
+
+    </div>
+    <div class="listOfCourses">
+        @Html.Action("_ListOfCourses", "Courses")
+    </div>
+</div>
+

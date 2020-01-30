@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProjectTeam1Hackathon_2019.Entity.HistoryCourses>
+
+<table class="course-list">
+    <thead>
+        <tr>
+            <th>
+                Назва курсу
+            </th>
+            <th>
+                Викладач
+            </th>
+            <th>
+                Кількість модулів
+            </th>
+            <th>
+                Дата початку
+            </th>
+            <th>
+                Дата закінчення
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var course in Model)
+        {
+        <tr>
+            <td>@course.Сourses.Name</td>
+            @* AspNetUsers поки це Teacher *@
+            <td>@course.AspNetUsers.LastName course.AspNetUsers.FirstName course.AspNetUsers.MiddleName</td>
+            <td>@course.Сourses.Modules.Count</td>
+            <td>@course.DataStart</td>
+            <td>@course.DataEnd</td>
+        </tr>
+        }
+    </tbody>
+</table>

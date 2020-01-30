@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ProjectTeam1Hackathon_2019.Entity.Modules>
+
+@{ 
+    int numerator = 1;
+}
+
+<div class="list-group">
+    @foreach(var module in Model)
+    {
+        <div class="list-group-item">@(numerator++) @module.Name</div>
+    }
+    
+</div>
+
